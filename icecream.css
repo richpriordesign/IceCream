@@ -1,0 +1,79 @@
+body{
+	background-color:#b0f1ff;
+}
+
+.fullSundae{
+	/*Do not need to put position:static as it is set to this by default*/
+	height:500px; 
+	/*Height of the whole sundae. If you put 6 scoops at 100px it would be too much unless you changed this to 600px etc.*/
+	margin-top:100px;
+}
+
+.fullSundae > .iceCreamScoop{
+	height:100px;
+}
+
+.iceCreamScoop{
+	border-radius:48%;
+	width:50%;
+	margin:0 auto; /*centers scoops in the glass*/
+	/*position:relative;*/
+}
+
+.glass{
+	/*Take this height away and the ice cream scoops will disappear. Give it 100% and it will extend down. It takes up 60% of the fullSundae. fullSundae has a height of 500px. Each scoop has a height of 100px. So 60% of FIVE scoops of ice cream is THREE ice cream scoops. Which is why in the HTML we put THREE ice cream scoops in the glass container DIV.*/
+	height:60%;  
+	border:2px solid #000;
+	border-top:none;
+	position:relative;
+}
+
+.glass .iceCreamScoop{
+	/*This affects the 3 iceCreamScoops in the Glass Container DIV*/
+	height:33.3%;
+	position:relative;
+}
+
+.whippedCream{
+	top:0;
+	left:25%;
+	height:120px;
+	width:50%;
+	border-radius:25%;
+	background-color:#FFF;
+	position:fixed;/*If you make the height of the window smaller and scroll this will ALWAYS be on top*/
+	z-index:7;
+}
+
+.cherry{
+	position:absolute;
+	border-radius:50%;
+	background-color:#ec0a1c;
+	height:25px;
+	width:25px;
+	margin-left:120px;
+	margin-top:110px;
+	z-index:6;/*If you want this on top of the whipped cream you have to increase the z-index to 8 because the .whippedCreap is on z-index of 7. It's like stacking a Photoshop layer.*/
+}
+
+/*** ICE CREAM FLAVORS ***/
+.mint{
+	background-color:#8ed7b0;
+}
+
+.cookiedough{
+	background-color:#fbdd6f;
+}
+
+.vanilla{
+	background-color:#fffcd8;
+}
+
+.chocolate{
+	background-color:#7a4a39;
+}
+
+.strawberry{
+	background-color:#f05283;
+}
+
